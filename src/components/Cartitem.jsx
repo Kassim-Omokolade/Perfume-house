@@ -1,26 +1,29 @@
-import React from 'react'
+import React from "react";
 import { useState } from "react";
 
-const Cartitem = ({id,image,title,price}) => {
-     const [num, setNum] = useState(0);
-const handleDecreaseNum = () => {
-  setNum(num - 1);
-};
-const handleIncreaseNum = () => {
-  setNum(num + 1);
-};
+const Cartitem = ({ id, image, title, price }) => {
+  const [num, setNum] = useState(0);
+  const handleDecreaseNum = () => {
+    setNum(num - 1);
+  };
+  const handleIncreaseNum = () => {
+    setNum(num + 1);
+  };
 
-const removeItem = (itemId) => {
-  const remainingProducts = cart.filter((cartItem) => cartItem.id !== itemId);
-  setCart(remainingProducts);
-};
-
+  const removeItem = (itemId) => {
+    const remainingProducts = cart.filter((cartItem) => cartItem.id !== itemId);
+    setCart(remainingProducts);
+  };
 
   return (
     <div className=" mb-3 p-3">
       <div className="d-flex gap-2">
         <div>
-          <img src={image} alt={title} style={{width:"95px",height:"110px"}} />
+          <img
+            src={image}
+            alt={title}
+            style={{ width: "95px", height: "110px" }}
+          />
         </div>
         <div>
           <h2 className="fs-5 fw-bold mb-3 ">{title}</h2>
@@ -45,7 +48,8 @@ const removeItem = (itemId) => {
             <p className=" pt-3 fw-bold ">N{price}</p>
             <button
               onClick={() => removeItem(cartItem.id)}
-              className="btn btn-outline-danger mt-2 w-50 " style={{height:"35px",width:"30px"}}
+              className="btn btn-outline-danger mt-2 "
+              style={{ height: "35px", width: "100px" }}
             >
               Remove
             </button>
@@ -54,6 +58,6 @@ const removeItem = (itemId) => {
       </div>
     </div>
   );
-}
+};
 
-export default Cartitem
+export default Cartitem;

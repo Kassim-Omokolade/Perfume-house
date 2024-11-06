@@ -2,26 +2,34 @@ import Header from "./components/Header"
 import Allperfumes from "./components/Allperfumes"
 import Cart from "./components/Cart"
 
+import { BrowserRouter,Routes,Route,Navigate } from "react-router-dom"
+import Login from "./pages/Login"
+import Register from "./pages/Register"
+import Error404 from "./pages/Error404"
+import Home from "./pages/Home"
+
 function App() {
   
 
+      {
+        
+      }
+
   return (
     <>
-    <Header/>
-    <div className="container my-4">
-      <div className="row">
-        <div className="col-lg-8">
-          <Allperfumes/>
-        </div>
-        <div className="col-lg-4">
-          <Cart/>
-        </div>
-      </div>
-
-    </div>
-      
+      <BrowserRouter>
+       
+        <Routes>
+          <Route>
+            <Route path="/" element={<Home />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="*" element={<Error404/>}/>
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </>
-  )
+  );
 }
 
 export default App
