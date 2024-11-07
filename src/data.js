@@ -57,6 +57,6 @@ export const perfumes = [
     rating: 5.0,
     price: 10000,
     itemsLeft: 10,
-    oldPrice: 30000,
+    oldPrice: 30000, 
   },
 ];

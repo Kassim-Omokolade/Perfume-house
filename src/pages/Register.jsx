@@ -70,10 +70,10 @@ const Register = () => {
             />
           </div>
 
-          <div className="mt-3 ">
+          <div className="mt-3 d-flex ">
             
 
-            <input type="checkbox" id="agree" />
+            <input type="checkbox" id="agree"  className='mb-4'/>
             <label htmlFor="agree" className="ms-2 register">
               I agree to <span style={{color:"#8D34FF"}}>Terms of Service</span> and <span style={{color:"#8D34FF"}}>Privacy Policies</span> 
             </label>
